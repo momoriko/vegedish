@@ -17,9 +17,9 @@
             <h1><a href="index.html"><img class="logo" src="images/logo.png" alt="Vege Dishホーム"></a></h1>
             <nav>
                 <ul class="main-nav">
-                    <li><a href="about.html">Vege Dishとは？</a></li>
-                    <li><a href="menu.html">商品ラインナップ</a></li>
-                    <li><a href="contact.html">お問い合わせ</a></li>
+                    <li><a href="#about">Vege Dishとは？</a></li>
+                    <li><a href="#menu">商品ラインナップ</a></li>
+                    <li><a href="#contact">お問い合わせ</a></li>
                 </ul>
             </nav>
         </header>
@@ -28,8 +28,95 @@
             <div class="home-content wrapper">
                 <h2 class="page-title">Your Daily Veggies, All in One Dish</h2>
                 <p>毎日手軽に１食分の野菜を摂ろう</p>
-                <a class="button" href="menu.html">商品ラインナップを見てみる</a>
+                <a class="button" href="#menu">商品ラインナップを見てみる</a>
             </div>
         </div>
-    </body>
-</html>
+
+        <section id="about">
+            <div class="wrapper">
+              <h2 class="page-title">Vege Dishとは？</h2>
+                <h2 class="page-title small-title">１食でしっかり野菜120g。バランスを考えた冷凍ワンプレート。</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>
+                            美味しさも手軽さも健康も妥協しない、<br>忙しい現代人の新習慣。<br>
+                            これ一つで必要な野菜をチャージ、<br>ココロとカラダにGREENを。
+                        </p>
+
+                        <p>
+                            専属の管理栄養士が中心となり、栄養バランスの摂れたメニューを開発しております。
+                        </p>
+                    </div>
+                    <img src="images/about.jpg" alt="Vege Dish商品画像" class="about-photo">
+                </div>
+                <div class="about-text2">
+                    <h2 class="page-title small-title">１日の野菜摂取量の状況</h2>
+                    <p>世代別　野菜摂取量（平成30年）</p>
+                    <img src="images/about2.png" alt="世代別野菜摂取量" class="about-photo2">
+                </div>
+            </div>
+        </section>
+
+        <section id="menu">
+            <div class="wrapper">
+              <h2 class="page-title">商品ラインナップ</h2>
+              <div class="menu-grid">
+                <div class="menu-item">
+                  <img src="images/menu1.jpeg" alt="チキンのトマト煮込みプレート" />
+                  <h3 class="item-title">鶏肉のトマト煮込み</h3>
+                  <p class="item-desc">彩り豊かな野菜と鶏むね肉を使用した、バランス抜群のプレートです。</p>
+                </div>
+                <div class="menu-item">
+                  <img src="images/menu2.jpeg" alt="和風ミートボールプレート" />
+                  <h3 class="item-title">和風ミートボール</h3>
+                  <p class="item-desc">根菜たっぷり！生姜の香りがアクセント、冷え対策にもぴったりな和風メニュー。</p>
+                </div>
+                <div class="menu-item">
+                  <img src="images/menu3.jpeg" alt="煮込みハンバーグプレート" />
+                  <h3 class="item-title">煮込みハンバーグ</h3>
+                  <p class="item-desc">国産合挽き肉のハンバーグにじっくり煮込んだ香り高いデミグラスソースをたっぷり使用。</p>
+                </div>
+                <div class="menu-item">
+                    <img src="images/menu4.jpeg" alt="彩り野菜と生姜焼きプレート" />
+                    <h3 class="item-title">彩り野菜と生姜焼き</h3>
+                    <p class="item-desc">甘辛くジューシーな豚の生姜焼きと、季節野菜をバランスよく盛り付けました。</p>
+                </div>
+                <div class="menu-item">
+                    <img src="images/menu5.jpeg" alt="スパイスカレープレート" />
+                    <h3 class="item-title">スパイスカレー</h3>
+                    <p class="item-desc">8種の彩り豊かな野菜と旨味たっぷりのチキンを煮込んだスパイスカレーです。</p>
+                </div>
+
+              </div>  <!-- menu-grid の閉じタグ -->
+            </div>  <!-- wrapper の閉じタグ -->
+        </section>
+        
+        <section id="contact">
+            <div class="wrapper">
+               <h2 class="page-title">お問い合わせ</h2>
+               <form action="#">
+                <div>
+                    <label for="name">お名前</label>
+                    <input type="text" id="name" name="your-name">
+                </div>
+
+                <div>
+                    <label for="email">メールアドレス</label>
+                    <input type="email" id="email" name="your-email">
+                </div>
+
+                <div>
+                    <label for="message">お問い合わせ内容</label>
+                    <textarea id="message" name="your-message"></textarea>
+                </div>
+
+                <input type="submit" class="button" value="送信">
+               </form> 
+            </div><!-- /.wrapper-->   
+        </section>   
+
+        <footer>
+            <div class="wrapper">
+                <p><small>Copyright 2025 Vege Dish</small></p>
+            </div>
+        </footer>
