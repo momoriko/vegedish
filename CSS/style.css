@@ -8,6 +8,7 @@ body{
     font-family:"Yu Gothic Medium","遊ゴシック Medium", YuGothic,"遊ゴシック体", "ヒラギノ角ゴ Pro W3",sans-serif;
 line-height: 1.7;
 color:#432;
+background-color: #fff;
 }
 
 a{
@@ -31,7 +32,7 @@ img{
 
 /* 見出し */
 .page-title{
-    font-size: 3rem; /* フォントサイズを3remに */
+    font-size: 3rem; 
     color: #fff; /* 白文字 */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 黒の柔らかい影 */
     font-family: 'Philosopher', serif;
@@ -48,7 +49,7 @@ img{
 .button {
     display: inline-block; /* インラインサイズに合わせる */
     font-size: 1.375rem;
-    background: linear-gradient(45deg, #6fcf97, #2ecc71); /* グリーングラデーション */
+    background: linear-gradient(45deg, #6fcf97, #155b32); /* グリーングラデーション */
     color: #fff;
     border-radius: 30px; /* もっと丸くする */
     padding: 12px 24px; /* ちょっとだけ余白を調整 */
@@ -117,7 +118,7 @@ iframe {
 }
 
 .home-content p{
-    font-size: 1.125rem;
+    font-size: 1.25rem;
     margin: 10px 0 42px;
     color: #fff;
 }
@@ -135,184 +136,123 @@ iframe {
     color: #fff;    
 }
 
-/* NEWS---------------------------- */
-#news {
-    background-color: rgba(0, 0, 0, 0.4);
-    background-image: url(../images/news-bg.jpg);
-    background-blend-mode: multiply;
-    height: 130px;
-    margin-bottom: 40px;
-}
-#news .page-title {
-    text-align: center;
-    color: #ffffff;
-}
-.news-contents {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 50px;
-}
-
-/* 記事部分 */
-article {
-    width: 74%;
-    order: 2;
+/* ABOUT(VegeDishとは？)------------*/
+/* タイトル */
+#about {
     background-color: #fff;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    margin-bottom: 50px;
 }
-.post-info {
-    position: relative;
-    padding-top: 4px;
-    margin-bottom: 40px;
-}
-
-.post-date {
-    background: #7ea666;
-    border-radius: 50%;
-    color: #fff;
-    width: 100px;
-    height: 100px;
-    font-size: 1.625rem;
+#about .page-title {
+    color: #114d28;
     text-align: center;
-    position: absolute;
-    top: 0;
-    padding-top: 10px;
+    padding: 3%;
+}
+#about .small-title {
+    color: #114d28;;
+    font-size: 25px;
+    text-align: center;
 }
 
-.post-date span {
-    font-size: 1rem;
-    border-top: 1px rgba(126,166,102,.5) solid;
-    padding-top: 6px;
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    justify-content: center; /* 横中央寄せ（お好みで） */
+}
+.about-text {
+    flex: 1;
+    min-width: 300px;
+    line-height: 2;
+}
+.about-text2 {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.about-text p + p {
+    margin-top: 1em; /* または 20px とかでもOK */
+}
+  
+/* VegeDishの画像 */
+.about-photo {
+    width: 440px;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.about-photo2 {
     display: block;
-    width: 60%;
     margin: 0 auto;
+    margin-bottom: 0; /* ← これを追加 */
 }
 
-.post-title {
-    font-family: "Yu Mincho", "Yumincho", serif;
-    font-size: 2rem;
-    font-weight: normal;
-}
-.post-title,
-.post-cat {
-    margin-left: 120px;
+/* 商品ラインナップ */
+#menu {
+    background-color: #e6f9e6; /* 明るいグリーン系 */
+    /*padding: 4rem 2rem;*/
+    margin-top: 0; /* 念のため */
+    padding-bottom: 6rem; /* ← ここを追加または上書きして余白を広めに！ */
+    /*padding-top: 4rem; /* これで上にしっかりスペース */
 }
 
-article img {
+#menu .page-title {
+    color: #114d28;
+    background: transparent; /* ← 念のため、背景は透明に */
+    text-shadow: none;       /* ← 他セクションの影を打ち消す */
+    text-align: center;
+    padding: 3%;
+}   
+.menu-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+.menu-item {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+.menu-item:hover {
+    transform: translateY(-5px);
+}
+.menu-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+.item-title {
+    font-size: 1.5rem;
+    margin: 16px 0 8px;
+    color: #114d28;
+}
+.item-desc {
+    font-size: 1rem;
+    color: #444;
     margin-bottom: 20px;
 }
-article p {
-    margin-bottom: 1rem;
-}
-
-/* サイドバー */
-aside {
-    width: 22%;
-    order: 3;
-}
-
-aside p {
-    padding: 12px 10px;
-}
-
-.sub-menu {
-    margin-bottom: 60px;
-    list-style: none;
-}
-.sub-menu li {
-    border-bottom: 1px #ddd solid;
-}
-.sub-menu a {
-    color: #432;
-    padding: 10px;
-    display: block;
-}
-.sub-menu a:hover {
-    color: #7ea666;
-}
-
-
-.ad {
-    order: 1;
-}
-
-/* MENU ----------------------*/
-.page-header {
-    margin-bottom: 0;
-}
-
-.big-bg {
-    padding-top: 0;
-}
-
-#menu {
-    background-color: rgba(0, 0, 0, 0.4);
-    background-image: url(../images/menu-bg.jpg);
-    background-blend-mode: multiply;
-    height: 130px;
-    margin-bottom: 40px;
-    overflow: hidden;
-}
-#menu .page-title {
-    text-align: center;
-    color: #ffffff;
-}
-#menu p {
-    font-size: 1.125rem;
-    margin: 10px 0 0;
-}
-
-.grid {
-    display: grid;
-    gap: 26px;
-    grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
-    margin-top: 6%;
-    margin-bottom: 50px;
-}
-.big-box {
-    grid-column: 1 / 3;
-    grid-row: 1 / 3;
-}
-.big-box img {
-    height: 94%;
-    width: 100%;
-    object-fit: cover;
-}
-
-/* CONTACT ------------------------ */
+  
+/* お問い合わせ */
 #contact {
-    background-color: rgba(0, 0, 0, 0.2);
-    background-image: url(../images/contact-bg.jpg);
-    background-blend-mode: multiply;
-    min-height: 75vh;
-    overflow: hidden;
+    background-image: url(../images/contact-bg.jpeg);
+    background-color: rgba(255, 255, 255, 0.6);
+    background-blend-mode: lighten; /* ← 明るく重ねる */
+    background-size: cover;         /* ← 背景をセクション全体に拡大 */
+    background-position: center;    /* ← 画像の中心を表示 */
+    background-repeat: no-repeat;   /* ← 画像の繰り返しを防ぐ */
+    padding-bottom: 6rem;
 }
-
 #contact .page-title {
-    color: #ffffff;
-}
-
-/*!SECTION {
-    background-color: rgba(0, 0, 0, 0.4);
-    background-image: url(../images/menu-bg.jpg);
-    background-blend-mode: multiply;
-    height: 130px;
-    margin-bottom: 40px;
-    overflow: hidden;
-}
-#menu .page-title {
+    color: #114d28;
+    background: transparent; /* ← 念のため、背景は透明に */
+    text-shadow: none;       /* ← 他セクションの影を打ち消す */
     text-align: center;
-    color: #ffffff;
-}*/
+    padding: 3%;
+}   
 
 /* フォーム */
-form {
-    color: #fff; /* 入力エリア以外のテキスト全体を白に */
-}
-
 form div {
     margin-bottom: 14px;
 }
@@ -324,7 +264,7 @@ label {
 input[type="text"],
 input[type="email"],
 textarea {
-    background: rgba(255,255,255,.5);
+    background: rgba(217,217,217,2);
     border: 1px #fff solid;
     border-radius: 5px;
     padding: 10px;
@@ -385,7 +325,7 @@ iframe {
 
 /* フッター ------------------------- */
 footer {
-    background: #36463e;
+    background: #114d28;
     text-align: center;
     padding: 26px 0 ;
 }
@@ -397,104 +337,75 @@ footer p {
 
 /* モバイル版 ---------------------------- */
 @media (max-width: 600px) {
-    .page-title {
-        font-size: 2.5rem;
+    html {
+      font-size: 90%; /* 少し小さめに調整 */
     }
+  
     .page-header {
-        flex-direction: column;
-        align-items: center;
+      flex-direction: column;
+      align-items: flex-start;
     }
-
-    /* HEADER */
+  
     .main-nav {
-        font-size: 1rem;
-        margin-top: 10px;
+      flex-direction: column;
+      font-size: 1rem;
+      margin: 0;
+      padding: 0;
     }
+  
     .main-nav li {
-        margin: 0 20px;
+      margin: 10px 0;
     }
-
-    /* HOME */
+  
     .home-content {
-        margin-top: 20%;
+      padding: 20% 5% 0;
+      height: auto;
     }
-
-    /* NEWS */
-    .news-contents {
-        flex-direction: column;
+  
+    .home-content h2 {
+      font-size: 2rem;
     }
-    #news.page-title {
-        margin-top: 30px;
+  
+    .about-content {
+      flex-direction: column;
     }
-    article,
-    aside {
-        width: 100%;
+  
+    .about-text,
+    .about-photo {
+      width: 100%;
     }
-    
-    aside {
-        margin-top: 60px;
+  
+    .menu-grid {
+      flex-direction: column;
+      align-items: center;
     }
-    .post-info {
-        margin-bottom: 30px;
+  
+    .menu-item {
+      width: 90%;
     }
-    .post-date {
-        width: 70px;
-        height: 70px;
-        font-size: 1rem;
-    }
-    .post-date span {
-        font-size: 0.875rem;
-        padding-top: 2px;
-    }
-    .post-title {
-        font-size: 1.375rem;
-    }
-    .post-cat {
-        font-size: 0.875rem;
-        margin-top: 10px;
-    }
-    .post-title,
-    .post-cat {
-        margin-left: 80px;
-    }
-    
-    /* MENU */
-    .menu-content {
-        margin-top: 20%;
-    }
-    .big-box {
-        grid-column: auto;
-        grid-row: auto;
-    }
-    .big-box img {
-        height: auto;
-    }
-
-    /* CONTACT */
-    #contact .page-title {
-        margin-top: 40px;
-    }
-    /* フォーム */
+  
     input[type="text"],
     input[type="email"],
     textarea {
-        max-width: 100%;
+      max-width: 100%;
     }
-    /* 店舗情報・地図 / SNS */
-    #location .wrapper,
-    #sns .wrapper {
-        flex-direction: column;
+  
+    .about-photo,
+    .about-photo2 {
+      width: 100%;
     }
-    .location-info,
-    .location-map,
-    .sns-box {
-        width: 100%;
+  
+    .page-title {
+      font-size: 2rem;
     }
-    .sns-box {
-        margin-bottom: 30px;
+  
+    .logo {
+      width: 180px;
+      margin-top: 10px;
+    }
+  
+    .button {
+      font-size: 1.1rem;
+      padding: 10px 20px;
     }
 }
-
-
-
-
