@@ -49,7 +49,7 @@ img{
 .button {
     display: inline-block; /* インラインサイズに合わせる */
     font-size: 1.375rem;
-    background: linear-gradient(45deg, #6fcf97, #155b32); /* グリーングラデーション */
+    background: #29da73; 
     color: #fff;
     border-radius: 30px; /* もっと丸くする */
     padding: 12px 24px; /* ちょっとだけ余白を調整 */
@@ -61,7 +61,7 @@ img{
 }
   
 .button:hover {
-    background: linear-gradient(45deg, #81fbb8, #28a745); /* ホバー時のグラデーション変化 */
+    background: #28a745;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* 影も少し強くする */
 }
 
@@ -140,6 +140,7 @@ iframe {
 /* タイトル */
 #about {
     background-color: #fff;
+    padding: 100px 170px;
 }
 #about .page-title {
     color: #114d28;
@@ -157,12 +158,14 @@ iframe {
     flex-wrap: wrap;
     gap: 30px;
     align-items: center;
-    justify-content: center; /* 横中央寄せ（お好みで） */
+    text-align: center;
+    /*justify-content: center; /* 横中央寄せ（お好みで） */
 }
 .about-text {
     flex: 1;
     min-width: 300px;
     line-height: 2;
+    text-align: center;
 }
 .about-text2 {
     margin-bottom: 0;
@@ -191,7 +194,7 @@ iframe {
     /*padding: 4rem 2rem;*/
     margin-top: 0; /* 念のため */
     padding-bottom: 6rem; /* ← ここを追加または上書きして余白を広めに！ */
-    /*padding-top: 4rem; /* これで上にしっかりスペース */
+    padding: 100px 170px;
 }
 
 #menu .page-title {
@@ -232,6 +235,7 @@ iframe {
     font-size: 1rem;
     color: #444;
     margin-bottom: 20px;
+    text-align: left;
 }
   
 /* お問い合わせ */
@@ -242,7 +246,7 @@ iframe {
     background-size: cover;         /* ← 背景をセクション全体に拡大 */
     background-position: center;    /* ← 画像の中心を表示 */
     background-repeat: no-repeat;   /* ← 画像の繰り返しを防ぐ */
-    padding-bottom: 6rem;
+    padding: 100px 170px;
 }
 #contact .page-title {
     color: #114d28;
@@ -253,8 +257,15 @@ iframe {
 }   
 
 /* フォーム */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
 form div {
     margin-bottom: 14px;
+    color: #114d28;
+    font-weight: bold;
 }
 label {
     font-size: 1.125rem;
@@ -264,64 +275,35 @@ label {
 input[type="text"],
 input[type="email"],
 textarea {
-    background: rgba(217,217,217,2);
-    border: 1px #fff solid;
-    border-radius: 5px;
+    width: 100%; /* 入力欄をフォーム幅いっぱいに */
     padding: 10px;
-    font-size: 1rem;
-}
-input[type="text"],
-input[type="email"] {
-    width: 100%;
-    max-width: 240px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* パディング込みで幅を計算 */
+    background-color: #eee; /* 背景色（今のグレーに近い） */
 }
 textarea {
-    width: 100%;
-    max-width: 480px;
-    height: 6rem;
-}
-input[type="submit"] {
-    border: none;
-    cursor: pointer;
-    line-height: 1;
-}
-/* 店舗情報・地図 */
-#location {
-    padding: 4% 0;
-}
-#location .wrapper {
-    display: flex;
-    justify-content: space-between;
-}
-.location-info {
-    width: 22%;
-}
-.location-info p {
-    padding: 12px 10px;
-}
-.location-map {
-    width: 74%;
-}
-/* iframe */
-iframe {
-    width: 100%;
-}
-/* SNS */
-#sns {
-    background: #faf7f0;
-    padding: 4% 0;
-}
-#sns .wrapper {
-    display: flex;
-    justify-content: space-between;
-}
-#sns .sub-title {
-    margin-bottom: 30px;
-}
-.sns-box {
-    width: 30%;
+    height: 150px; /* テキストエリアの高さを調整 */
 }
 
+#contact .button {
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+    padding: 10px;
+    background: linear-gradient(to right, #66bb6a, #43a047);
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+  
+#contact .button:hover {
+    background: linear-gradient(to right, #43a047, #388e3c);
+}
 
 /* フッター ------------------------- */
 footer {
@@ -356,6 +338,10 @@ footer p {
     .main-nav li {
       margin: 10px 0;
     }
+
+    #home {
+        align-items: center;
+    }
   
     .home-content {
       padding: 20% 5% 0;
@@ -363,6 +349,7 @@ footer p {
     }
   
     .home-content h2 {
+      display: block;
       font-size: 2rem;
     }
   
@@ -373,6 +360,10 @@ footer p {
     .about-text,
     .about-photo {
       width: 100%;
+    }
+
+    #about .small-title {
+        font-size: 20px;
     }
   
     .menu-grid {
