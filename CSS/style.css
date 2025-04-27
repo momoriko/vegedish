@@ -343,6 +343,10 @@ footer p {
     margin-top: 10px;
   }
 
+  .page-title {
+      font-size: 28px;
+  }
+
   .home-content {
     text-align: center;
     align-items: center;
