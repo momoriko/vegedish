@@ -116,6 +116,9 @@ iframe {
     height: 90vh;             /* 画面の高さに合わせる */
     padding-left: 5%;         /* 左に余白（お好みで調整） */
 }
+.break-mobile {
+  display: inline; /* 通常は横並び */
+}
 
 .home-content p{
     font-size: 1.25rem;
@@ -345,10 +348,6 @@ footer p {
   .logo {
     width: 180px;
     margin-top: 10px;
-  }
-
-  .page-title {
-      font-size: 25px;
   }
 
   #home {
