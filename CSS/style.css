@@ -321,7 +321,7 @@ footer p {
 /* 768px以下のスマホ対応 */
 @media (max-width: 768px) {
     html {
-      font-size: 50%; /* 少し小さめに調整 */
+      font-size: 40%; /* 少し小さめに調整 */
     }
 
   .page-header {
