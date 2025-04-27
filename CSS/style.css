@@ -320,6 +320,9 @@ footer p {
 /* モバイル版 ---------------------------- */
 /* 768px以下のスマホ対応 */
 @media (max-width: 768px) {
+    html {
+      font-size: 90%; /* 少し小さめに調整 */
+    }
 
   .page-header {
     flex-direction: column;
