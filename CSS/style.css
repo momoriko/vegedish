@@ -326,6 +326,9 @@ footer p {
     .break-mobile {
     display: block; /* スマホでは改行させる */
   }
+    .page-title {
+        font-size: 25px;
+    }
     
     html {
       font-size: 90%; /* 少し小さめに調整 */
