@@ -318,76 +318,61 @@ footer p {
 
 
 /* モバイル版 ---------------------------- */
-@media (max-width: 600px) {
-    html {
-      font-size: 90%; /* 少し小さめに調整 */
-    }
-  
-    .page-header {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .main-nav {
-      flex-direction: column;
-      font-size: 1rem;
-      margin: 0;
-      padding: 0;
-    }
-  
-    .main-nav li {
-      margin: 10px 0;
-    }
-  
-    .home-content {
-      padding: 20% 5% 0;
-      height: auto;
-    }
-  
-    .home-content h2 {
-      display: block;
-      font-size: 2rem;
-    }
-  
-    .about-content {
-      flex-direction: column;
-    }
-  
-    .about-text,
-    .about-photo {
-      width: 100%;
-    }
+/* 768px以下のスマホ対応 */
+@media (max-width: 768px) {
 
-    #about .small-title {
-        font-size: 20px;
-    }
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
   
-    .menu-grid {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .menu-item {
-      width: 90%;
-    }
-  
-    input[type="text"],
-    input[type="email"],
-    textarea {
-      max-width: 100%;
-    }
-  
-    /*.page-title {
-      font-size: 2rem;
-    }
-  
-    .logo {
-      width: 180px;
-      margin-top: 10px;
-    }
-  
-    .button {
-      font-size: 1.1rem;
-      padding: 10px 20px;
-    }*/
+  .main-nav {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .main-nav li {
+    margin: 10px 0 0 0;
+  }
+
+  .logo {
+    width: 180px;
+    margin-top: 10px;
+  }
+
+  .home-content {
+    text-align: center;
+    align-items: center;
+    padding-left: 0;
+  }
+
+  .home-content p {
+    font-size: 1rem;
+  }
+
+  #about, #menu, #contact {
+    padding: 50px 20px;
+  }
+
+  .about-content {
+    flex-direction: column;
+  }
+
+  .menu-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-item {
+    width: 90%;
+  }
+
+  form {
+    width: 100%;
+    padding: 0;
+  }
+
+  iframe {
+    height: 200px;
+  }
 }
