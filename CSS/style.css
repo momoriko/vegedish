@@ -325,7 +325,7 @@ footer p {
   
     .page-header {
       flex-direction: column;
-      /*align-items: flex-start;*/
+      align-items: flex-start;
     }
   
     .main-nav {
@@ -377,12 +377,7 @@ footer p {
       max-width: 100%;
     }
   
-    .about-photo,
-    .about-photo2 {
-      width: 100%;
-    }
-  
-    .page-title {
+    /*.page-title {
       font-size: 2rem;
     }
   
@@ -394,5 +389,5 @@ footer p {
     .button {
       font-size: 1.1rem;
       padding: 10px 20px;
-    }
+    }*/
 }
